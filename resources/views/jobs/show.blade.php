@@ -6,7 +6,7 @@
 
     <div>
 
-        <h1 class="text-2xl font-bold">Job Title: {{$job->employer->name}}</h1>
+        <h1 class="text-2xl font-bold">Job Provider: {{$job->employer->name}}</h1>
         <p class="text-xl font-semibold">This job pays {{$job['salary']}}</p>
 
     </div>
