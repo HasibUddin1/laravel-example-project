@@ -46,6 +46,13 @@
                                 <x-nav-link href="/login" :active="request()->is('login')">Login</x-nav-link>
                             @endguest
 
+                            @auth
+                                <form method="POST" action="/logout">
+                                    @csrf
+                                    <x-form-button>Logout</x-form-button>
+                                </form>
+                            @endauth
+
                             <!-- Profile dropdown -->
                             <div class="relative ml-3">
                                 

@@ -19,7 +19,10 @@
                                     class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                     <div class="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">
                                     </div>
-                                    <x-form-input type="text" name="first_name" id="first_name" placeholder="John" required/>
+                                    <x-form-input type="text" name="first_name" id="first_name" placeholder="John"
+                                        required />
+
+                                    <x-form-error name="first_name" />
                                 </div>
 
                             </div>
@@ -31,8 +34,10 @@
                                     class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                     <div class="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">
                                     </div>
-                                    <x-form-input type="text" name="last_name" id="last_name"
-                                        placeholder="Doe" required/>
+                                    <x-form-input type="text" name="last_name" id="last_name" placeholder="Doe"
+                                        required />
+
+                                    <x-form-error name="last_name" />
                                 </div>
 
                             </div>
@@ -46,7 +51,9 @@
                                     <div class="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">
                                     </div>
                                     <x-form-input type="email" name="email" id="email"
-                                        placeholder="example@gmail.com" required/>
+                                        placeholder="example@gmail.com" required />
+
+                                    <x-form-error name="email" />
                                 </div>
 
                             </div>
@@ -59,8 +66,10 @@
                                     class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                     <div class="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">
                                     </div>
-                                    <x-form-input type="password" name="password" id="password"
-                                        placeholder="Password" required/>
+                                    <x-form-input type="password" name="password" id="password" placeholder="Password"
+                                        required />
+
+                                    <x-form-error name="password" />
                                 </div>
 
                             </div>
@@ -73,8 +82,8 @@
                                     class="flex items-center rounded-md bg-white pl-3 outline outline-1 -outline-offset-1 outline-gray-300 focus-within:outline focus-within:outline-2 focus-within:-outline-offset-2 focus-within:outline-indigo-600">
                                     <div class="shrink-0 select-none text-base text-gray-500 sm:text-sm/6">
                                     </div>
-                                    <x-form-input type="password" name="password_confirmation" id="password_confirmation"
-                                        placeholder="Confirm Password" required/>
+                                    <x-form-input type="password" name="password_confirmation"
+                                        id="password_confirmation" placeholder="Confirm Password" required />
                                 </div>
 
                             </div>
