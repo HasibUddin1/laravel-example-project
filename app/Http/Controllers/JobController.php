@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Employer;
 use App\Models\Job;
 use Illuminate\Http\Request;
 
@@ -33,10 +34,23 @@ class JobController extends Controller
             'salary' => ['required']
         ]);
 
+        // Check if the logged-in user is already an employer
+        $user = auth()->user();
+        $employer = Employer::where('user_id', $user->id)->first();
+
+        // If the user is not an employer, create an employer record
+        if (!$employer) {
+            $employer = Employer::create([
+                'user_id' => $user->id,
+                'name' => $user->first_name . ' ' . $user->last_name,
+            ]);
+        }
+
+        // Create the job listing associated with the employer
         Job::create([
             'title' => request('title'),
             'salary' => request('salary'),
-            'employer_id' => 1
+            'employer_id' => $employer->id
         ]);
 
         return redirect('/jobs');
@@ -44,6 +58,8 @@ class JobController extends Controller
 
     public function edit(Job $job)
     {
+
+
         return view('jobs.edit', ['job' => $job]);
     }
 
